@@ -46,8 +46,8 @@ legend('u_1d', 'u_2d', 'Location', 'best');
 grid on;
 
 % Calculates the derivatives to find acceleration
-u1dd = derivative(u1d, Ts);
-u2dd = derivative(u2d, Ts);
+u1d_dot = derivative(u1d, Ts);
+u2d_dot = derivative(u2d, Ts);
 
 figure('Name', 'Acceleration', 'NumberTitle', 'off');
 
@@ -77,7 +77,7 @@ K21 = lambda * Cauchy_kernel(x2, x1, beta);
 y2_hat = K21 * ((K11 + sigma2 * I_N)\ y1);
 
 % Plot and compares the MAP with the real value
-figure;
+figure('Name', 'MAP Estimate', 'NumberTitle', 'off');;
 plot(y2, 'b', 'DisplayName', 'Recorded output (y2)'); hold on;
 plot(y2_hat, 'r--', 'LineWidth', 1.5, 'DisplayName', 'MAP estimate');
 xlabel('Samples');
@@ -96,7 +96,7 @@ K21 = lambda2 * Cauchy_kernel(x2, x1, beta);
 
 y2_hat = K21 * ((K11 + sigma2 * I_N)\ y1);
 
-figure;
+figure('Name', 'MAP Estimate Lambda small', 'NumberTitle', 'off');;
 plot(y2, 'b', 'DisplayName', 'Recorded output (y2)'); hold on;
 plot(y2_hat, 'r--', 'LineWidth', 1.5, 'DisplayName', 'MAP estimate');
 xlabel('Samples');
@@ -112,7 +112,7 @@ K21 = lambda * Cauchy_kernel(x2, x1, beta3);
 y2_hat = K21 * ((K11 + sigma2 * I_N)\ y1);
 
 
-figure;
+figure('Name', 'MAP Estimate Beta small', 'NumberTitle', 'off');;
 plot(y2, 'b', 'DisplayName', 'Recorded output (y2)'); hold on;
 plot(y2_hat, 'r--', 'LineWidth', 1.5, 'DisplayName', 'MAP estimate');
 xlabel('Samples');
