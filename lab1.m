@@ -1,4 +1,3 @@
-
 clear;    
 clc;      
 close all;
@@ -127,8 +126,8 @@ w(11:end) = 10;
 wd = derivative(w, Ts);
 wdd = derivative(wd, Ts);
 xf = [w, wd, wdd];
-K11 = lambda * Cauchy_kernel(x1, x1, beta3);
-K_f1 = lambda * Cauchy_kernel(xf, x1, beta3);
+K11 = lambda * Cauchy_kernel(x1, x1, beta);
+K_f1 = lambda * Cauchy_kernel(xf, x1, beta);
 yf = K_f1 * ((K11 + sigma2 * I_N)\ y1);
 
 
