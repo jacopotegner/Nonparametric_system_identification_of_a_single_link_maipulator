@@ -1,6 +1,8 @@
 # Nonparametric_system_identification_of_a_single_link_maipulator
 
-*QUESTION 1
+*this project was made in collaboration with Alessio Vragnaz and Luca Casarin*
+
+#QUESTION 1#
 
 According to the results you found, does the estimated model describe well the manipulator system? Motivate the answer.
 
